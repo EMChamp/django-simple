@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Anime page.</h1>
+
+{% if anime_data %}
+<ul>
+  {% for anime in anime_data %}
+  {% if anime.title.english != None %}
+    <li>{{ anime.title.english }}</li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% else %}
+<p>No context.</p>
+{% endif %} 
+
+{% endblock %}
