@@ -5,12 +5,11 @@ import requests, json
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
-class AboutPageView(TemplateView):
-    template_name = 'about.html'
+def news_page(request):
+	return render(request, 'news.html')
 
 def anime_page(request):
 	anime_data = json.loads(json.dumps(get_seasonal_anime()))
-	print(anime_data['data']['Page']['media'])
 	return render(request, 'anime.html', {'anime_data' : anime_data['data']['Page']['media']})
 
 def get_seasonal_anime():

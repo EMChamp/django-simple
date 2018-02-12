@@ -7,7 +7,7 @@
 <ul>
   {% for anime in anime_data %}
   {% if anime.title.english != None %}
-    <li>{{ anime.title.english }}</li>
+    <li>{{ anime.title.english }} | Mean Score: {{ anime.meanScore }} | Average Score: {{ anime.averageScore }} | Popularity: {{ anime.popularity }} </li>
   {% endif %}
   {% endfor %}
 </ul>

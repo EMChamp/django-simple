@@ -1,4 +1,4 @@
-# simple_project/urls.py
+# anime_tracker/urls.py
 from django.contrib import admin
 from django.urls import path, include
 

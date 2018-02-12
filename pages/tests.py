@@ -7,10 +7,10 @@ class SimpleTests(SimpleTestCase):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
 
-    def test_about_page_status_code(self):
-        response = self.client.get('/about/')
+    def test_news_page_status_code(self):
+        response = self.client.get('/news/')
         self.assertEqual(response.status_code, 200)
 
     def test_anime_page_status_code(self):
         response = self.client.get('/anime/')
-        self.assertEqual(response.status_code, 200)  
+        self.assertEqual(response.status_code, 200) 
